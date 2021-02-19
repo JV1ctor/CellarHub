@@ -1,7 +1,7 @@
-<h1 align="center">
+<p align="center">
 <br>
-<img src="http://arioliveira.duckdns.org:3110/alunos/GuilhermeC/CellarHub%20(2).svg" alt="CellarHub_Logo">
-</h1>
+<img src="http://arioliveira.duckdns.org:3110/alunos/GuilhermeC/cellarhub_logo.PNG" height="90" width="420" alt="CellarHub_Logo">
+</p>
 
 <p align="center">Web system to assist the management of the collection of wine bottles in cellars.</p>
 
