@@ -2,6 +2,26 @@
 
 use Illuminate\Support\Str;
 
+$mysql = 'local_mysql';
+
+if (getenv('APP_ENV')!='local') {
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $host = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $database = substr($url["path"], 1);
+
+    $mysql = 'remote_mysql';
+} else {
+
+    $host = "";
+    $username = "";
+    $password = "";
+    $database = "";
+
+}
+
 return [
 
     /*
@@ -15,7 +35,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', $mysql),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,7 +63,18 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        'remote_mysql' => array(
+            'driver' => 'mysql',
+            'host' => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+        ),
+
+        'local_mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
