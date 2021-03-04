@@ -44,6 +44,6 @@ class User extends Authenticatable
     ];
 
     public function vinho(){
-        return $this->hasMany(Corredor::class);
+        return $this->hasMany(Vinho::class);
     }
 }

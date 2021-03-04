@@ -13,10 +13,10 @@ class Vinho extends Model
     use HasFactory;
 
     public function user(){
-        return $this->bellongsTo(Vinho::class);
+        return $this->bellongsTo(User::class);
     }
 
     public function armario(){
-        return $this->bellongsTo(Corredor::class);
+        return $this->bellongsTo(Armario::class);
     }
 }
