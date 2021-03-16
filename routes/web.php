@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\HomeController;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,5 @@ use App\Http\Controllers\Site\HomeController;
 */
 
 
-
-Route::get('/',[HomeController::class,'index'])->name('teste');
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
