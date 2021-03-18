@@ -44,7 +44,7 @@
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#about-section" class="nav-link">About</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                <li><a href="#" class="btn-white btn-small">Login</a></li>
+                <li><a href=" {{route('login')}} " class="btn-white btn-small">Login</a></li>
               </ul>
             </nav>
           </div>
