@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="author" content="" />
         <title>CellarHub - Login</title>
-        <link href="login.css" rel="stylesheet" />
+
+        <link rel="icon" type="img" href="{{ mix('favicon.png') }}">
+        <link href=" {{ mix('/css/login.css') }} " rel="stylesheet" />
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -33,7 +35,9 @@
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                                        <div class="small">
+                                            <a href="#">Need an account? Sign up!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +49,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; CellarHub {{ date(Y) }}</div>
+                            <div class="text-muted">Copyright &copy; CellarHub {{ date('Y') }}</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -56,6 +60,6 @@
                 </footer>
             </div>
         </div>
-        <script src="login.js"></script>
+        <script src=" {{ mix('/js/login.js') }} "></script>
     </body>
 </html>
