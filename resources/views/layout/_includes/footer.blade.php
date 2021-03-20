@@ -3,9 +3,9 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; CellarHub {{ date('Y') }}</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="https://github.com/guilhermecostam/CellarHub">Github page</a>
                                 &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                                <a href="https://github.com/guilhermecostam/CellarHub/blob/main/LICENSE">License</a>
                             </div>
                         </div>
                     </div>

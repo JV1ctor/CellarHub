@@ -1,9 +1,9 @@
 @extends('layout.site') <!-- chama template site.blade.php -->
 
-@section('titulo','Dashboard &mdash; CellarHub')
+@section('titulo','Porão {nome do armario} &mdash; CellarHub')
 
 @section('conteudo') <!-- section que leva até yield do site.blade.php -->
 
-<br><br><br><br><h1 align="center">Hey som, testando</h1>
+<br><br><br><br><h1 align="center">Tela armário</h1>
 
 @endsection
