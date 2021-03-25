@@ -12,6 +12,19 @@ class Vinho extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'marca',
+        'nacionalidade',
+        'vinhedo',
+        'preco_venda',
+        'preco_compra',
+        'nota_degustacao',
+        'teor_alcoolico',
+        'ano',
+        'user_id',
+        'armario_id'
+    ];
+
     public function user(){
         return $this->bellongsTo(User::class);
     }

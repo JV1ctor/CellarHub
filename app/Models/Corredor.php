@@ -12,6 +12,11 @@ class Corredor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nomenclatura',
+        'porao_id',
+    ];
+
     public function porao(){
         return $this->bellongsTo(Porao::class);
     }

@@ -12,6 +12,12 @@ class Armario extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'quant_garrafa',
+        'nomenclatura',
+        'corredor_id'
+    ];
+
     public function vinho(){
         return $this->hasMany(Vinho::class);
     }

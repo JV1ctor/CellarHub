@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function vinho(){
         return $this->hasMany(Vinho::class);
     }
+
+    public function porao(){
+        return $this->hasMany(Porao::class);
+    }
 }

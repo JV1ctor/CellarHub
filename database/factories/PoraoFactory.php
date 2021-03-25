@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Porao;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PoraoFactory extends Factory
@@ -23,6 +24,7 @@ class PoraoFactory extends Factory
     {
         return [
             'nomenclatura'=> $this->faker->state(),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }
