@@ -4,45 +4,84 @@
 
 @section('conteudo') <!-- section que leva até yield do site.blade.php -->
 
-<br><br><br><br><h1 align="center">Tela cadastro de armário</h1>
-
     @if ( Request::is('*/edit'))
-    <form action="{{ url('armarios/update') }}/{{ $armario->id }}" method="post">
-    @csrf
-        <div>
-            <label>Quantidade de garrafas:</label>
-            <input type="number" name="quant_garrafa" value="{{ $armario->quant_garrafa }}">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card shadow-lg border-0 rounded-lg mt-6">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-4">
+                            Armário
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url('armarios/update') }}/{{ $armario->id }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Quantidade de garrafas:
+                                </label>
+                                <input type="number" name="quant_garrafa" value="{{ $armario->quant_garrafa }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Nomenclatura:
+                                </label>
+                                <input type="text" name="nomenclatura" value="{{ $armario->nomenclatura }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Corredor:
+                                </label>
+                                <input type="number" name="corredor_id" value="{{ $armario->corredor_id }}">
+                            </div>
+                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                <a class="btn btn-primary" href="index.html">Editar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Nomenclatura:</label>
-            <input type="text" name="nomenclatura" value="{{ $armario->nomenclatura }}">
-        </div>
-        <div>
-            <label>Corredor:</label>
-            <input type="number" name="corredor_id" value="{{ $armario->corredor_id }}">
-        </div>    
-        
-        <input type="submit">
-    </form>
     @else
 
-    <form action="{{ url('armarios/save') }}" method="post">
-        @csrf
-        <div>
-            <label>Quantidade de garrafas:</label>
-            <input type="number" name="quant_garrafa">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card shadow-lg border-0 rounded-lg mt-6">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-4">
+                            Armário
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url('armarios/save') }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Quantidade de garrafas:
+                                </label>
+                                <input type="number" name="quant_garrafa">
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Nomenclatura:
+                                </label>
+                                <input type="text" name="nomenclatura">
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1">
+                                    Corredor:
+                                </label>
+                                <input type="number" name="corredor_id">
+                            </div>
+                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                <a class="btn btn-primary" href="index.html">Cadastrar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Nomenclatura:</label>
-            <input type="text" name="nomenclatura">
-        </div>
-        <div>
-            <label>Corredor:</label>
-            <input type="number" name="corredor_id">
-        </div>    
-            
-        <input type="submit">
-    </form>
+
     @endif
 
 @endsection

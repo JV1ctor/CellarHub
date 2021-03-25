@@ -4,37 +4,71 @@
 
 @section('conteudo') <!-- section que leva até yield do site.blade.php -->
 
-<br><br><br><br><h1 align="center">Tela cadastro de porao</h1>
-
-    @if ( Request::is('*/edit'))
-    <form action="{{ url('poraos/update') }}/{{ $porao->id }}" method="POST">
-    @csrf
-        <div>
-            <label>Nomenclatura:</label>
-            <input type="text" name="nomenclatura" value="{{ $porao->nomenclatura }}">
+@if ( Request::is('*/edit'))
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg mt-6">
+                <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">
+                        Porão
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{ url('poraos/update') }}/{{ $porao->id }}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label class="small mb-1">
+                                Nomenclatura:
+                            </label>
+                            <input type="text" name="nomenclatura" value="{{ $porao->nomenclatura }}">
+                        </div>
+                        <div class="form-group">
+                            <label class="small mb-1">
+                                Usuário:
+                            </label>
+                            <input type="number" name="user_id" value="{{ $porao->user_id }}">
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="btn btn-primary" href="index.html">Editar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Usuário:</label>
-            <input type="number" name="user_id" value="{{ $porao->user_id }}">
-        </div>    
-        
-        <input type="submit">
-    </form>
-    @else
+    </div>
+@else
 
-    <form action="{{ url('poraos/save') }}" method="POST">
-        @csrf
-        <div>
-            <label>Nomenclatura:</label>
-            <input type="text" name="nomenclatura">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-0 rounded-lg mt-6">
+                <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">
+                        Porão
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{ url('poraos/save') }}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label class="small mb-1">
+                                Nomenclatura:
+                            </label>
+                            <input type="text" name="nomenclatura">
+                        </div>
+                        <div class="form-group">
+                            <label class="small mb-1">
+                                Usuário:
+                            </label>
+                            <input type="number" name="user_id">
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="btn btn-primary" href="index.html">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Usuário:</label>
-            <input type="number" name="user_id">
-        </div>    
-            
-        <input type="submit">
-    </form>
-    @endif
+    </div>
+@endif
 
 @endsection
