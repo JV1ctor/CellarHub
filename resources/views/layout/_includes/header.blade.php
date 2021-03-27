@@ -30,7 +30,10 @@
                         <a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="{{ url('/login/sair') }}">
+                                Logout
+                        </a>
+                        </form>
                     </div>
                 </li>
             </ul>
@@ -101,7 +104,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        {{Auth::user() -> name}}
                     </div>
                 </nav>
             </div>
