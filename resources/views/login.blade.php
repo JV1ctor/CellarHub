@@ -19,17 +19,18 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="{{ url('/login/entrar') }}" method="post">
+                                            @csrf
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <label class="small mb-1">Email</label>
+                                                <input type="email" class="form-control py-4" name="email" placeholder="Enter email address" />
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <label class="small mb-1">Password</label>
+                                                <input type="password" class="form-control py-4" name="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="btn btn-primary" href="#">Login</a>
+                                                <button class="btn btn-primary">Login</button>
                                             </div>
                                         </form>
                                     </div>
@@ -50,6 +51,8 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; CellarHub {{ date('Y') }}</div>
                             <div>
+                                <a href="https://github.com/guilhermecostam/CellarHub">Github page</a>
+                                &middot;
                                 <a href="https://github.com/guilhermecostam/CellarHub/blob/main/LICENSE">License</a>
                             </div>
                         </div>

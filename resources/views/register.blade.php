@@ -33,7 +33,7 @@
                                                 <input class="form-control py-4" type="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="btn btn-primary" href="#">Create account</a>
+                                                <button class="btn btn-primary">Create account</button>
                                             </div>
                                         </form>
                                     </div>
@@ -52,6 +52,8 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; CellarHub {{ date('Y') }}</div>
                             <div>
+                                <a href="https://github.com/guilhermecostam/CellarHub">Github page</a>
+                                &middot;
                                 <a href="https://github.com/guilhermecostam/CellarHub/blob/main/LICENSE">License</a>
                             </div>
                         </div>
