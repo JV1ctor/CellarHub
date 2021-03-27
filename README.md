@@ -40,9 +40,8 @@ $ php artisan key:generate
 # Create the database, update the .env, and migrate the tables
 $ php artisan migrate
 ```
-```
-In the virual environment (.env) the variable 'local_mysql' will be used to specify the MySQL database. This variable is used to differentiate the local (our computed) and remote (deploy hosting) databases
-```
+Obs:. In the virtual environment (.env) the variable 'local_mysql' will be used to specify the MySQL database. This variable is used to differentiate the local (our computed) and remote (deploy hosting) databases
+
 ## How to contribute
 Do you want to contribute to the project? Just follow these instructions:
 
