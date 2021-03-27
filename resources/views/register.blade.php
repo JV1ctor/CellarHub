@@ -20,6 +20,7 @@
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create account</h3></div>
                                     <div class="card-body">
                                         <form>
+                                            @csrf
                                             <div class="form-group">
                                                 <label class="small mb-1">Complete name</label>
                                                 <input class="form-control py-4" type="name" placeholder="Enter complete name" />
