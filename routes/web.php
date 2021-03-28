@@ -25,7 +25,7 @@ use App\Http\Controllers\Admin\VinhoController;
 Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::get('/register',[RegisterController::class,'register'])->name('register');
-Route::post('/register/save',[RegisterController::class,'register'])->name('register.save');
+Route::post('/register/save',[RegisterController::class,'save'])->name('register.save');
 
 Route::get('/login',[LoginController::class,'login'])->name('login');
 Route::post('/login/entrar',[LoginController::class,'entrar'])->name('login.entrar');

@@ -43,7 +43,8 @@
       </table>
     </div>
   </div>
-
-  <a href="{{ url('poraos/add') }}">Novo porão</a>
+  <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+    <a class="btn btn-primary" href="{{ url('poraos/add') }}">Novo porão</a>
+  </div>
 
 @endsection

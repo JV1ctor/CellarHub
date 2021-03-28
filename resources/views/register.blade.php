@@ -19,22 +19,22 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create account</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form action="{{ url('register/save') }}" method="post">
                                             @csrf
                                             <div class="form-group">
                                                 <label class="small mb-1">Complete name</label>
-                                                <input class="form-control py-4" type="name" placeholder="Enter complete name" />
+                                                <input class="form-control py-4" type="text" name="name" placeholder="Enter complete name" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1">Email</label>
-                                                <input class="form-control py-4" type="email" placeholder="Enter email address" />
+                                                <input class="form-control py-4" type="email" name="email" placeholder="Enter email address" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1">Password</label>
-                                                <input class="form-control py-4" type="password" placeholder="Enter password" />
+                                                <input class="form-control py-4" type="password" name="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary">Create account</button>
+                                                <input class="btn btn-primary" type="submit" value="Create account">
                                             </div>
                                         </form>
                                     </div>

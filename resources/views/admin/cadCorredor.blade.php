@@ -29,7 +29,7 @@
                                 <input type="number" name="porao_id" value="{{ $corredor->porao_id }}">
                             </div>
                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                <a class="btn btn-primary" href="index.html">Editar</a>
+                                <input class="btn btn-primary" type="submit" value="Editar">
                             </div>
                         </form>
                     </div>
@@ -62,7 +62,7 @@
                                 <input type="number" name="porao_id">
                             </div>
                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                <a class="btn btn-primary" href="index.html">Cadastrar</a>
+                                <input class="btn btn-primary" type="submit" value="Cadastrar">
                             </div>
                         </form>
                     </div>

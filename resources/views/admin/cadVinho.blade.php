@@ -49,7 +49,9 @@
             <label>Código do usuário:</label>
             <input type="number" name="user_id" value="{{ $vinho->user_id }}">
         </div>
-        <input type="submit" value="Atualizar">
+        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+            <input class="btn btn-primary" type="submit" value="Editar">
+        </div>
     </form>
 
     @else
@@ -96,7 +98,7 @@
             <label>Código do usuário:</label>
             <input type="number" name="user_id">
         </div>
-        <input type="submit" value="Cadastrar">
+        <input class="btn btn-primary" type="submit" value="Cadastrar">
     </form>
     @endif
 
